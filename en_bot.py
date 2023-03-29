@@ -133,7 +133,7 @@ async def welcome(query):
             response['continue_to_main_menu'], callback_data="continue_to_main_menu")],
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    file = open('files/intro.mp4', 'rb')
+    file = open('files/en_intro.mp4', 'rb')
     await query.message.reply_video(file)
     await query.message.reply_text(text=response['content'], reply_markup=reply_markup)
     # await query.answer()
@@ -180,7 +180,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         ]
 
         reply_markup = InlineKeyboardMarkup(keyboard)
-        file = open('files/energy.pdf', 'rb')
+        file = open('files/en_energy.pdf', 'rb')
         await query.message.reply_document(file)
         await query.message.reply_text(text=response['content'], reply_markup=reply_markup)
     elif query.data == "presentation_videos":
