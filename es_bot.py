@@ -97,7 +97,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             welcome_message += response['seller_whatsapp_number'] + '\n'
             welcome_message += response['seller_referral_link'] + '\n'
             keyboard = [
-                [InlineKeyboardButton("GET STARTED", callback_data="0")],
+                [InlineKeyboardButton(
+                    "QUIERO MULTIPLICAR MI CAPITAL", callback_data="0")],
             ]
 
             reply_markup = InlineKeyboardMarkup(keyboard)
