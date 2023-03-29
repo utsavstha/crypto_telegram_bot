@@ -37,8 +37,8 @@ KEYBOARD_CALLBACKDATA = "keyboard-callback-data"
 WELCOME_TEXT = "Hello! I am the Artificial Intelligence System of ⚡ENERGY GO PLUS⚡"
 BASE_URL = 'http://vps91640.inmotionhosting.com:8001/api/'
 FILE_BASE_URL = 'http://vps91640.inmotionhosting.com:8001'
-BOT_LANGUAGE = "en"
-TOKEN = "6200167918:AAGqgl9XylwPEhayNW8is-b3EsVcnWYHmNg"
+BOT_LANGUAGE = "es"
+TOKEN = "6223867442:AAHNwFMsmyyr2XWIopoL78RLpbz7vb2v3y4"
 
 
 def get_data(url):
@@ -86,7 +86,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if len(context.args) > 0:
         code, response = post_data(url, user.first_name, user.last_name,
                                    user.language_code, user.id, context.args[0])
-        # print(response)
+        print(code)
         if code == 200:
             # print(context.args)
             url = f"leads/{context.args[0]}"
