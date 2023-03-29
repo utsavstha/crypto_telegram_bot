@@ -87,7 +87,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         code, response = post_data(url, user.first_name, user.last_name,
                                    user.language_code, user.id, context.args[0])
         # print(response)
-        if code == 200:
+        if code == 201:
             # print(context.args)
             url = f"leads/{context.args[0]}"
             welcome_message = ''
